@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "poem", "poem.vcxproj", "{A935DB2C-E61A-4872-89D1-32120F76EB5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A935DB2C-E61A-4872-89D1-32120F76EB5A}.Debug|x64.ActiveCfg = Debug|x64
+		{A935DB2C-E61A-4872-89D1-32120F76EB5A}.Debug|x64.Build.0 = Debug|x64
+		{A935DB2C-E61A-4872-89D1-32120F76EB5A}.Debug|x86.ActiveCfg = Debug|Win32
+		{A935DB2C-E61A-4872-89D1-32120F76EB5A}.Debug|x86.Build.0 = Debug|Win32
+		{A935DB2C-E61A-4872-89D1-32120F76EB5A}.Release|x64.ActiveCfg = Release|x64
+		{A935DB2C-E61A-4872-89D1-32120F76EB5A}.Release|x64.Build.0 = Release|x64
+		{A935DB2C-E61A-4872-89D1-32120F76EB5A}.Release|x86.ActiveCfg = Release|Win32
+		{A935DB2C-E61A-4872-89D1-32120F76EB5A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7518BBE-EC2A-494F-8FF0-053C0E5A9661}
+	EndGlobalSection
+EndGlobal
