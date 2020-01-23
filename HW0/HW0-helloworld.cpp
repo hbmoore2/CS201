@@ -1,12 +1,19 @@
+/**
+*HW0-helloworld.cpp
+*Harrison Moore
+*CS201
+*Jan 22, 2020
+*/
 #include <iostream>
-#include <string>
+using std::cout;
+using std::endl;
 
-int main(int argc, char** argv)
+int main()
 {
-	std::string input;
-	std::cout << "Hello, World!" << std::endl;
-	std::cin >> input;
-	std::cout << "You typed " << input;
-	std::cout << std::endl;
+	cout << "Hello, World!" << endl;
+	cout << "Hello, World!" << endl;
+	cout << "Hello, World!" << endl;
+	cout << "Hello, World!" << endl;
+	cout << "Hello, World!" << endl;
 	return 0;
 }
