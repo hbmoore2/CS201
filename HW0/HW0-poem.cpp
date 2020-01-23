@@ -1,7 +1,15 @@
+/**
+*HW0-poem.cpp
+*Harrison Moore
+*CS201
+*Jan 22, 2020
+*/
 #include <iostream>
+using std::cout;
+using std::endl;
 
-int main(int argc, char** argv)
+int main()
 {
-	std::cout << "A poem that I like is: Had I the heaven's embroidered cloths, Enwrought with golden and silver light, The blueand the dimand the dark cloths Of nightand lightand the half - light; I would spread the cloths under your feet : But I, being poor, have only my dreams; I have spread my dreams under your feet; Tread softly because you tread on my dreams." << std::endl;
-		return 0;
+	cout << "a poem that I like is:" << endl;
+	return 0;
 }
