@@ -6,9 +6,14 @@
 //
 #include <iostream>
 using std::cout;
+using std::cin;
 using std::endl;
 
 
 int main() {
-	cout << "hello" << endl;
+	int i;
+	cout << "Enter a positive integer: ";
+	cin >> i;
+	cout << "\n";
+	return 0;
 }
