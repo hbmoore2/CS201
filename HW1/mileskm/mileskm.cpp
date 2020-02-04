@@ -18,6 +18,7 @@ int main()
 	cin >> m;
 	cout << endl;
 
+		// Calculate km from miles
 	k = m * 1.609;
 	cout << m << " miles is " << k << " kilometers" << endl;
 	return 0;
