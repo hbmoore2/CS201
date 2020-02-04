@@ -16,7 +16,11 @@ int main()
     cout << "Enter a positive integer: ";
     cin >> n;
     space = n - 1;
-        cout << endl;
+    cout << endl;
+    if (n <= 0);
+    {
+        cout << n << " is not a positive integer!" << endl;
+    }
 
         //upper diamond
         for (i = 1; i <= n; i++)
