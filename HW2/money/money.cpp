@@ -32,21 +32,21 @@ int main()
 	cout << "How many dollars do you have?" << endl;
 		cin >> dollars;
 
-	money(pennies, "Pennies", "Penny");
+		money(pennies, "Pennies", "Penny");
 	money(nickels, "Nickels", "Nickel");
 	money(dimes, "Dimes", "Dime");
 	money(quarters, "Quarters", "Quarter");
-	money(dollars, "Dollars", "Dollar");
+	money(dollars, "Dollars\n", "Dollar\n");
 
 	double total = pennies * 0.01 + nickels * 0.05 + dimes * 0.10 + quarters * 0.25 + dollars * 1.00;
-	cout << "Total amount of money is: $" << total;
+	cout << "Total amount of money is: $" << total << endl;
 }
 
 void money(int amount, string moneyplural, string moneysingle)
 {
 	if (amount < 0)
 	{
-		cout << "Please input positive values" << endl;
+		cout << "Negative values were given" << endl;
 		return;
 	}
 	cout << "You have: " << amount << " ";
