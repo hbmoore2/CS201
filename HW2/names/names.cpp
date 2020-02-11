@@ -32,7 +32,6 @@ int main(int argc, char** argv)
 	DoesNameExist(nameToFind, names);
 
 	PrintNames(names);
-
 	return 0;
 }
 
@@ -72,9 +71,7 @@ void PrintNames(const vector<string> & names)
 			name = names[i];
 		}
 	}
-
 	cout << name;
-
 }
 
 
@@ -84,7 +81,7 @@ bool DoesNameExist(const string & nameToFind, const vector<string> names)
 	{
 		if (nameToFind == names[i])
 		{
-			cout << "Name found on line " << i << ": " << names[i] << "\n" << endl;
+			cout << "Name found on line " << i << ": " << names[i] << endl;
 			return true;
 		}
 	}
