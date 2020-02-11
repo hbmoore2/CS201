@@ -1,95 +1,61 @@
 #include <iostream>
-#include <vector>
 #include <string>
-#include <algorithm>
-
 using std::cout;
 using std::endl;
 using std::cin;
 using std::string;
-using std::vector;
 
-void InputNames(vector<string>& names);
+//
+int pennies;
+int nickels;
+int dimes;
+int quarters;
+int halfdollars;
 
-bool DoesNameExist(const string& nameToFind, const vector<string> names);
-
-void PrintNames(const vector<string>& names);
-
-
-
-int main(int argc, char** argv)
+void money(int amount, string moneyplural, string money);
+int main()
 {
-	vector<string> names;
-	string nameToFind;
+	cout << "How many pennies do you have: ";
+	cin >> pennies;
 
-	InputNames(names);
+	cout << "How many nickels do you have: ";
+	cin >> nickels;
 
-	cout << "Search for a name: ";
-	cin >> nameToFind;
-	DoesNameExist(nameToFind, names);
+	cout << "How many dimes do you have: ";
+	cin >> dimes;
 
-	PrintNames(names);
+	cout << "How many quarters do you have: ";
+	cin >> quarters;
 
+	cout << "How many half dollars do you have: ";
+	cin >> halfdollars;
 
+	money(pennies, "Pennies", "Penny");
+	money(nickels, "Nickels", "Nickel");
+	money(dimes, "Dimes", "Dime");
+	money(quarters, "Quarters", "Quarter");
+	money(halfdollars, "Half Dollars", "Half Dollar");
 
-	return 0;
+	double total = pennies * 0.01 + nickels * 0.05 + dimes * 0.10 + quarters * 0.25 + halfdollars * 0.50;
+	cout << "The total is: $" << total;
 }
 
-
-
-void InputNames(vector<string>& names)
+void money(int amount, string moneyplural, string moneysingle) // Function for money counting
 {
-	for (int i = 0; i < 10; i++)
+	if (amount < 0)
 	{
-		string name;
-		cout << "Please enter a name: ";
-		std::getline(cin, name);
-		names.push_back(name);
+		cout << "Negative value provided" << endl;
+		return;
 	}
-	cout << "\n" << endl;
-}
+	cout << "You have: " << amount << " ";
 
-
-
-void PrintNames(const vector<string>& names)
-{
-	cout << "Names listed: " << endl;
-
-	for (int i = 0; i < 10; i++)     // Prints the list of names
+	if (amount == 1)
 	{
-		cout << names[i] << " ";
+		cout << moneysingle << endl;
+	}
+	else
+	{
+		cout << moneyplural << endl;
 	}
 
-	int long_name = 0;					 // Marks the name with the most letters
-	string name;
-	cout << "\nThe name with the most letters: " << endl;
-
-	for (int i = 0; i < 10; i++)
-	{
-		if (names[i].size() > long_name)
-		{
-			long_name = names[i].size();
-			name = names[i];
-		}
-	}
-
-	cout << name;
-
-}
-
-
-
-bool DoesNameExist(const string& nameToFind, const vector<string> names)
-{
-	for (int i = 0; i < 10; i++)
-	{
-		if (nameToFind == names[i])
-		{
-			cout << "Name found at sector " << i << ": " << names[i] << "\n" << endl;
-			return true;
-		}
-	}
-
-	cout << "Name does not exist.\n" << endl;
-	return false;
 }
