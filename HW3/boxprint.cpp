@@ -15,5 +15,9 @@ using std::string;
 void TopBottom(string s, int size)
 {
 	string star(size, '*')
-
+		for (int i = 0; i < size; i++)
+		{
+			cout << "*";
+		}
+	cout << star << endl;
 }

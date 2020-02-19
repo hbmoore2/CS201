@@ -6,6 +6,7 @@
 //
 #include <iostream>
 #include <string>
+#include "boxer.h"
 using std::cout;
 using std::cin;
 using std::endl;
