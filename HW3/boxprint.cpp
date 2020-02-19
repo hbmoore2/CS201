@@ -21,3 +21,5 @@ void TopBottom(string s, int size)
 		}
 	cout << star << endl;
 }
+
+void box
