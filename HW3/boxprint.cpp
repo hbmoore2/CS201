@@ -22,4 +22,9 @@ void TopBottom(string s, int size)
 	cout << star << endl;
 }
 
-void box
+void box(string m, int size)
+{
+	string star(size, "*")
+		TopBottom(s, size);
+	cout << star;
+}
