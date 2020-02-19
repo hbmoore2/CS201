@@ -14,35 +14,29 @@ using std::string;
 
 int main()
 {
-	int size;
 	string s;
-	int i;
+	int size;
 
 	cout << "Type leave to exit the program." << endl;
 	while (s != "leave")
 	{
+		cout << "Please enter a string: ";
+		cin >> s;
+		if (s == "leave")			//exits the program
+		{
+			return 0;
+		}
 		cout << "Please enter an integer (size): ";
 		cin >> size;
 
-		if (size > 1)
+		if (size < 0)
 		{
-			cout << "Please enter a string: ";
-			cin >> s;
-			if (s == "leave")	//exits program
+			while (size < 0)
 			{
-				return 0;
-			}
-
-			for (int i = 0; s.length() > i; i++)
-			{
-				for (int a = 0; a < size; a++)
-				{
-				}
+				cout << "Please enter an integer greater than 0." << endl;
+				cin >> size;
 			}
 		}
-		else
-		{
-			cout << "Please enter an integer greater than 0." << endl;
-		}
+		box(s, size);
 	}
 }

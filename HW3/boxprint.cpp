@@ -12,7 +12,7 @@ using std::cin;
 using std::endl;
 using std::string;
 
-void TopBottom(string s, int size)
+void TopBottom(string s, int size)		//size of top and bottom of box
 {
 	string star(size, '*')
 		for (int i = 0; i < size; i++)
@@ -26,7 +26,7 @@ void TopBottom(string s, int size)
 		}
 }
 
-void box(string s, int size)
+void box(string s, int size)		//print box
 {
 	string star(size, "*")
 		TopBottom(s, size);
