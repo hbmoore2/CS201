@@ -18,19 +18,24 @@ int main()
 	string s;
 	int i;
 
-	cout << "Please enter an integer (size): ";
-	cin >> size;
-
-	if (size > 1)
+	cout << "Type leave to exit the program." << endl;
+	while (s != "leave")
 	{
-		cout << "Please enter a string: ";
-		cin >> s;
-		for (int i = 0; s.length() > i; i++)
+		cout << "Please enter an integer (size): ";
+		cin >> size;
+
+		if (size > 1)
 		{
-			for (int a = 0; a < size; a++)
-			{ }
+			cout << "Please enter a string: ";
+			cin >> s;
+			for (int i = 0; s.length() > i; i++)
+			{
+				for (int a = 0; a < size; a++)
+				{
+				}
+			}
 		}
+		else
+			cout << "Please enter an integer greater than 0." << endl;
 	}
-	else
-		cout << "Please enter an integer greater than 0." << endl;
 }

@@ -18,7 +18,7 @@ void TopBottom(string s, int size)
 		for (int i = 0; i < size; i++)
 		{
 			cout << "*";
-			for (int a = 0; a < m.length() + 2; k++)
+			for (int a = 0; a < s.length() + 2; k++)
 			{
 				cout << "*";
 			}
@@ -31,17 +31,17 @@ void box(string m, int size)
 	string star(size, "*")
 		TopBottom(s, size);
 	cout << star;
-	for (int b = 0; b < m.length() + 2; b++)
+	for (int b = 0; b < s.length() + 2; b++)
 	{
 		cout << " ";
 	}
 	cout << star << endl;
-	cout << star << " " << m << " " << star << endl;
+	cout << star << " " << s << " " << star << endl;
 	cout << star;
-	for (int b = 0; b < m.length() + 2; b++)
+	for (int b = 0; b < s.length() + 2; b++)
 	{
 		cout << " ";
 	}
 	cout << star << endl;
-	TopBottom(m, size);
+	TopBottom(s, size);
 }

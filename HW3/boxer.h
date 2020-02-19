@@ -8,5 +8,5 @@
 #include <iostream>
 #include <string>
 
-void TopBottom(string m, int size);
-void box(string m, int size);
+void TopBottom(string s, int size);
+void box(string s, int size);
