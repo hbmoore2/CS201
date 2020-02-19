@@ -17,12 +17,19 @@ int main()
 	string s;
 	int i;
 
-	cout << "Please enter an integer: ";
+	cout << "Please enter an integer (size): ";
 	cin >> size;
 
 	if (size > 1)
 	{
 		cout << "Please enter a string: ";
 		cin >> s;
+		for (int i = 0; s.length() > i; i++)
+		{
+			for (int a = 0; a < size; a++)
+			{ }
+		}
 	}
+	else
+		cout << "Please enter an integer greater than 0." << endl;
 }
