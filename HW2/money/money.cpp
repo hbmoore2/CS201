@@ -32,7 +32,7 @@ int main()
 	cout << "How many dollars do you have?" << endl;
 		cin >> dollars;
 
-		money(pennies, "Pennies", "Penny");
+	money(pennies, "Pennies", "Penny");
 	money(nickels, "Nickels", "Nickel");
 	money(dimes, "Dimes", "Dime");
 	money(quarters, "Quarters", "Quarter");
