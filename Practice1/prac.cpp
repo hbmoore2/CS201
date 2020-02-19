@@ -1,48 +1,26 @@
 #include <iostream>
-#include <string>
-#include <vector>
 
-using std::cout;
-using std::endl;
-using std::cin;
+using namespace std;
 
-int main()
-{
-	std::vector<std::string> people; // Vectors are established
-	std::vector<int> scores;
+int main() {
 
-	std::string x; //establishing variables
-	int y;
-	bool flag = false;
+    int size;
+    string s;
+    int i;
+    cout << "Please input a string and a size integer" << endl;
 
-	while (flag == false)
-	{
-		cout << "Input name and score, type end to stop " << endl;
-		cin >> x;
-		if (x == "end")
-			break;
+    cout << "Size?: " << endl;
+    cin >> size;
+    if (size > 1) {
+        cout << "String?: " << endl;
+        cin >> s;
+        for (int i = 0; s.length() > i; i++) {
 
-		for (int i = 0; i < people.size(); i++)
-		{
-			if (x == people[i]) // error message
-			{
-				cout << "Error: Name is already in use";
-				flag = true;
-			}
-		}
-		if (flag == false)
-		{
-			cout << "score\n" << endl; // collecting score input
-			cin >> y;
-
-			people.push_back(x);
-			scores.push_back(y);
-
-			cout << "\n\n";
-		}
-	}
-	for (int i = 0; i < people.size(); i++)
-	{
-		cout << people[i] << " - " << scores[i] << "\n";// Displays ending scores and names
-	}
+            for (int a = 0; a < size; a++) {
+            }
+        }
+    }
+    else {
+        cout << "Please enter a size larger than 0" << endl;
+    }
 }
