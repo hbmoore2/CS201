@@ -38,4 +38,10 @@ void box(string m, int size)
 	cout << star << endl;
 	cout << star << " " << m << " " << star << endl;
 	cout << star;
+	for (int b = 0; b < m.length() + 2; b++)
+	{
+		cout << " ";
+	}
+	cout << star << endl;
+	TopBottom(m, size);
 }
