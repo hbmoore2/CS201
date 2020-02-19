@@ -12,11 +12,8 @@ using std::cin;
 using std::endl;
 using std::string;
 
-int main()
+void TopBottom(string s, int size)
 {
-	string m;
-	int box;
+	string star(size, '*')
 
-	cout << "Enter something to print: ";
-	cin >> m;
 }
