@@ -28,6 +28,11 @@ int main()
 		{
 			cout << "Please enter a string: ";
 			cin >> s;
+			if (s == "leave")	//exits program
+			{
+				return 0;
+			}
+
 			for (int i = 0; s.length() > i; i++)
 			{
 				for (int a = 0; a < size; a++)
@@ -36,6 +41,8 @@ int main()
 			}
 		}
 		else
+		{
 			cout << "Please enter an integer greater than 0." << endl;
+		}
 	}
 }

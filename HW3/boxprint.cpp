@@ -26,7 +26,7 @@ void TopBottom(string s, int size)
 		}
 }
 
-void box(string m, int size)
+void box(string s, int size)
 {
 	string star(size, "*")
 		TopBottom(s, size);
