@@ -5,7 +5,6 @@
 //Feb 17, 2020
 //
 #include <iostream>
-#include <vector>
 
 using std::cout;
 using std::cin;
@@ -36,5 +35,9 @@ int collatz(int num)
 	if (num % 2 == 0)
 	{
 		return num / 2;
+	}
+	else
+	{
+		return num * 3 + 1;
 	}
 }
