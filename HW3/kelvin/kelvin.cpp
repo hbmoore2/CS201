@@ -10,7 +10,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-double convert(double t)
+double convert(double t)		//temp conversion
 {
 	double k = t + 273.15;
 	return k;
@@ -23,7 +23,7 @@ int main()
 	cin >> t;
 
 	double k = convert(t);
-	if (k < 0)
+	if (k < 0)						//error message if input is invalid
 	{
 		cout << "This temperature is not possible.";
 		return 0;
