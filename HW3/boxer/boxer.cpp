@@ -6,37 +6,56 @@
 //
 #include <iostream>
 #include <string>
+#include <vector>
 #include "boxer.h"
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
 
-int main()
+string box(string s, int n)
 {
-	string s;
-	int size;
+    string star = "";
+    string layers;    
+    string message = "";
 
-	cout << "Type leave to exit the program." << endl;
-	while (s != "leave")
-	{
-		cout << "Please enter a string: ";
-		cin >> s;
-		if (s == "leave")			//exits the program
-		{
-			return 0;
-		}
-		cout << "Please enter an integer (size): ";
-		cin >> size;
+    string wid = "";  
+    for (int i = 0; i < n; i++)
+    {
+        wid += "*";
+    }
 
-		if (size < 0)
-		{
-			while (size < 0)
-			{
-				cout << "Please enter an integer greater than 0." << endl;
-				cin >> size;
-			}
-		}
-		box(s, size);
-	}
+    if (n != 0)
+    {
+        star = "**";
+        for (int i = 0; i < s.size(); i++) // size of box
+        {
+            star += "*";
+        }
+        star = wid + star + wid;
+        if (n > 1)
+        {
+            for (int i = 0; i < n; i++)     // box width
+            {
+                layers += star;
+
+                if (i < n - 1)    
+                    layers += "\n";
+            }
+            star = layers;
+        }
+    }
+
+    message += wid + " ";
+    for (int i = 0; i < s.size(); i++)
+    {
+        message += " ";
+    }
+    message += " " + wid;
+
+    message += "\n" + wid + " " + s + " " + wid + "\n"; // message in box
+
+    message += wid + " ";
+    for (int i = 0; i < s.size(); i++)
+    {
+        message += " ";
+    }
+    message += " " + wid;
+    return star + "\n" + message + "\n" + star;
 }

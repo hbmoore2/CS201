@@ -4,10 +4,14 @@
 //CS201
 //Feb 17, 2020
 //
-#pragma once
-#include <iostream>
-#include <string>
+#ifndef BOXER_H
+#define BOXER_H
+using std::cout;
+using std::endl;
+using std::cin;
 using std::string;
+using std::vector;
 
-void TopBottom(string s, int size);
-void box(string s, int size);
+string box(string s, int n);
+
+#endif

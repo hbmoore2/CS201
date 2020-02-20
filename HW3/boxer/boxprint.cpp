@@ -6,42 +6,30 @@
 //
 #include <iostream>
 #include <string>
+#include <vector>
 #include "boxer.h"
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
 
-void TopBottom(string s, int size)		//size of top and bottom of box
+int main()
 {
-	string star(size, '*')
-		for (int i = 0; i < size; i++)
-		{
-			cout << "*";
-			for (int a = 0; a < s.length() + 2; k++)
-			{
-				cout << "*";
-			}
-			cout << star << endl;
-		}
-}
+    string s;
+    int n; 
 
-void box(string s, int size)		//print box
-{
-	string star(size, "*");
-	TopBottom(s, size);
-	cout << star;
-	for (int b = 0; b < s.length() + 2; b++)
-	{
-		cout << " ";
-	}
-	cout << star << endl;
-	cout << star << " " << s << " " << star << endl;
-	cout << star;
-	for (int b = 0; b < s.length() + 2; b++)
-	{
-		cout << " ";
-	}
-	cout << star << endl;
-	TopBottom(s, size);
+    while (s != "exit")
+    {
+        cout << "Enter a Message (type 'exit' to stop): " << endl;
+        cin >> s;
+        if (s == "exit")        // exits program
+        {
+            break;
+        }
+        cout << "Enter a positive integer: ";
+        cin >> n;
+        while (n < 0)
+        {
+            cout << "Please enter a positive integer: ";
+            cin >> n;
+        }
+        cout << box(s, n) << endl;
+    }
+    return 0;
 }
