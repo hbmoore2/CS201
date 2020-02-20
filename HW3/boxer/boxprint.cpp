@@ -28,8 +28,8 @@ void TopBottom(string s, int size)		//size of top and bottom of box
 
 void box(string s, int size)		//print box
 {
-	string star(size, "*")
-		TopBottom(s, size);
+	string star(size, "*");
+	TopBottom(s, size);
 	cout << star;
 	for (int b = 0; b < s.length() + 2; b++)
 	{
