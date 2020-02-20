@@ -1,21 +1,37 @@
-//
-//boxprint.cpp
-//Harrison Moore
-//CS201
-//Feb 17, 2020
-//
 #include <iostream>
-#include <string>
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
+#include<vector>
 
+using std::cout;
+using std::endl;
+using std::cin;
+
+int collatz(int num);
 int main()
 {
-	string m;
-	int box;
-
-	cout << "Enter something to print: ";
-	cin >> m;
+	int a;
+	cout << "Insert a positive number to begin: ";
+	cin >> a;
+	while (a <= 0)
+	{
+		cout << "Not a valid input, please input a POSITIVE number: ";
+		cin >> a;
+	}
+	while (a > 1)
+	{
+		cout << a << " ";
+		a = collatz(a);
+	}
+	cout << a << endl;
+	return 0;
+}
+int collatz(int num)
+{
+	if (num % 2 == 0)
+	{
+		return num / 2;
+	}
+	else
+	{
+		return num * 3 + 1;
+	}
 }
