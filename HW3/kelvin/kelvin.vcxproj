@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{CE2E9097-6360-4A75-8F8D-BF5FBEC353FC}</ProjectGuid>
-    <RootNamespace>HW3</RootNamespace>
+    <ProjectGuid>{26EFD09D-C07E-45FD-B39D-CC14BA09690E}</ProjectGuid>
+    <RootNamespace>kelvin</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -91,8 +91,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>
-      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -140,11 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="boxer.cpp" />
-    <ClCompile Include="boxprint.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="boxer.h" />
+    <ClCompile Include="kelvin.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
