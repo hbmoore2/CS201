@@ -19,7 +19,7 @@ double convert(double t)		//temp conversion
 int main()
 {
 	double t = 0;
-	cout << "Enter a temperature in Celsius: ";
+	cout << "Enter a temperature in Celsius to convert to Kelvin: ";
 	cin >> t;
 
 	double k = convert(t);
