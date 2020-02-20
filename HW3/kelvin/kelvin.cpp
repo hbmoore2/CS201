@@ -21,4 +21,12 @@ int main()
 	double t = 0;
 	cout << "Enter a temperature in Celsius: ";
 	cin >> t;
+
+	double k = convert(t);
+	if (k < 0)
+	{
+		cout << "This temperature is not possible.";
+		return 0;
+	}
+	cout << k << endl;
 }
