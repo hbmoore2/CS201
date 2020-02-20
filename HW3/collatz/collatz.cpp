@@ -30,3 +30,11 @@ int main()
 	cout << a << endl;
 	return 0;
 }
+
+int collatz(int num)
+{
+	if (num % 2 == 0)
+	{
+		return num / 2;
+	}
+}
