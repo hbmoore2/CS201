@@ -10,6 +10,12 @@ using std::cout;
 using std::cin;
 using std::endl;
 
+double convert(double t)
+{
+	double k = t + 273.15;
+	return k;
+}
+
 int main()
 {
 	double t = 0;
