@@ -98,4 +98,10 @@ int main()
 		}
 		cout << endl;
 	}
+	cout << "Congratzzz! You guessed it!" << endl;
+
+	int a;
+	cout << endl;
+	cin >> a;
+	return 0;
 }
