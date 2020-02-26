@@ -142,6 +142,7 @@
     <ClCompile Include="tozenizertest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="tokenizer.h" />
     <ClInclude Include="tozenizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
