@@ -38,16 +38,20 @@ void AnalyzeTokens(const vector<string>& tokens)
 		string::size_type pos1 = tokens[i].find_first_of("0123456789");
 		string::size_type pos2 = tokens[i].substr(0, 1).find_first_of("_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
 		string::size_type pos3 = tokens[i].find_first_of("\"");
-		for (int j = 0; j < tokens[i].size(); j++)
-		{
-			if (tokens[i].substr(j, 1).find_first_of("0123456789") > 1)
-				noti++;
-			else
-				for (int j = 0; j < tokens[i].size(); j++)
-				{
-					if (tokens[i].substr(j, 1).find_first_of("0123456789") > 1)
-						noti++;
-				}
-		}
+		if (pos1 > 1000)
+			noti++;
+		else
+			for (int j = 0; j < tokens[i].size(); j++)
+			{
+				if (tokens[i].substr(j, 1).find_first_of("0123456789") > 1)
+					noti++;
+				else
+					for (int j = 0; j < tokens[i].size(); j++)
+					{
+						if (tokens[i].substr(j, 1).find_first_of("0123456789") > 1)
+							noti++;
+					}
+
+			}
 	}
 }
