@@ -45,13 +45,10 @@ void AnalyzeTokens(const vector<string>& tokens)
 			{
 				if (tokens[i].substr(j, 1).find_first_of("0123456789") > 1)
 					noti++;
-				else
-					for (int j = 0; j < tokens[i].size(); j++)
-					{
-						if (tokens[i].substr(j, 1).find_first_of("0123456789") > 1)
-							noti++;
-					}
-
 			}
+		if (noti == 0)
+			cout << "[integer]              \"" << tokens[i] << "\"" << endl;
+		else if (tokens[i].size() == 0)
+			cout << "[integer]              \"\"" << tokens[i] << endl;
 	}
 }

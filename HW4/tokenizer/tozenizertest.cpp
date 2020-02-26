@@ -11,7 +11,7 @@
 int main()
 {
 	int end = 1;
-	cout << "Please enter some text. To exit, type \"end\", \"End\" or \"END\":" << endl;
+	cout << "Please enter some text. To finish, type \"end\", \"End\" or \"END\":" << endl;
 	string str;
 	vector<string> tokens;
 
@@ -33,7 +33,7 @@ int main()
 
 	int b;
 	cout << endl;
-	cout << "Program finished. Enter a character to return: ";
+	cout << "Program finished. Enter a character to end: ";
 	cin >> b;
 	return 0;
 }
