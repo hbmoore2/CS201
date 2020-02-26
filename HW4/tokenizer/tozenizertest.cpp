@@ -15,7 +15,7 @@ int main()
 	string str;
 	vector<string> tokens;
 
-	while (end != 0)
+	while (end != 0)		//Keeps the user in program
 	{
 		ReadLine(str);
 		StringToTokenWS(str, tokens);

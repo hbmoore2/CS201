@@ -42,6 +42,12 @@ void AnalyzeTokens(const vector<string>& tokens)
 		{
 			if (tokens[i].substr(j, 1).find_first_of("0123456789") > 1)
 				noti++;
+			else
+				for (int j = 0; j < tokens[i].size(); j++)
+				{
+					if (tokens[i].substr(j, 1).find_first_of("0123456789") > 1)
+						noti++;
+				}
 		}
 	}
 }
