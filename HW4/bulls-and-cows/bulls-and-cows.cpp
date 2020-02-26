@@ -45,6 +45,13 @@ int main()
 			a = Vrandom[i] = numbers[random];
 			numbers[random] = -1;
 		}
-		cout << ".";
+	}
+	cout << endl;
+
+	cout << "Guess the four digit number: ";
+	while (bulls < 4)
+	{
+		if (trys > 0)
+			cout << "Enter another guess: ";
 	}
 }
