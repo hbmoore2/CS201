@@ -31,6 +31,7 @@ unsigned StringToTokenWS(const string& str, vector<string>& tokens)
 	return 0;
 }
 void AnalyzeTokens(const vector<string>& tokens)
+
 {
 	for (int i = 0; i < tokens.size(); i++)
 	{
@@ -50,5 +51,11 @@ void AnalyzeTokens(const vector<string>& tokens)
 			cout << "[integer]              \"" << tokens[i] << "\"" << endl;
 		else if (tokens[i].size() == 0)
 			cout << "[integer]              \"\"" << tokens[i] << endl;
+		else if (pos3 < 10)
+			cout << "[string]               \"\\" << tokens[i] << "\\\"" << endl;
+		else if (pos2 < 10)
+			cout << "[identifier]           \"" << tokens[i] << "\"" << endl;
+		else
+			cout << "[other]                \"" << tokens[i] << "\"" << endl;
 	}
 }
