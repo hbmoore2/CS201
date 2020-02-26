@@ -138,12 +138,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="tozenizer.cpp" />
-    <ClCompile Include="tozenizertest.cpp" />
+    <ClCompile Include="tokenizer.cpp" />
+    <ClCompile Include="tokenizertest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tokenizer.h" />
-    <ClInclude Include="tozenizer.h" />
+    <ClInclude Include="tokenizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
