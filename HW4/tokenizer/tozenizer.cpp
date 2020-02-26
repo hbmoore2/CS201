@@ -27,5 +27,21 @@ unsigned StringToTokenWS(const string& str, vector<string>& tokens)
 		tokens.push_back(s);
 		a = a + s.size() + 1;
 	}
+	tokens.push_back("");
 	return 0;
+}
+void AnalyzeTokens(const vector<string>& tokens)
+{
+	for (int i = 0; i < tokens.size(); i++)
+	{
+		int noti = 0;
+		string::size_type pos1 = tokens[i].find_first_of("0123456789");
+		string::size_type pos2 = tokens[i].substr(0, 1).find_first_of("_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+		string::size_type pos3 = tokens[i].find_first_of("\"");
+		for (int j = 0; j < tokens[i].size(); j++)
+		{
+			if (tokens[i].substr(j, 1).find_first_of("0123456789") > 1)
+				noti++;
+		}
+	}
 }

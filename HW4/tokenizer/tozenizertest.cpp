@@ -28,4 +28,13 @@ int main()
 			end = 0;
 	}
 	tokens.pop_back();
+
+	AnalyzeTokens(tokens);
+
+	int b;
+	cout << endl;
+	cout << "Program finished. Enter a character to return: ";
+	cin >> b;
+	return 0;
 }
+
