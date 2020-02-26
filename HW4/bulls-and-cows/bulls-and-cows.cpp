@@ -18,6 +18,7 @@ using std::cin;
 using std::endl;
 using std::vector;
 using std::string;
+using std::istringstream;
 
 int main()
 {
@@ -53,5 +54,21 @@ int main()
 	{
 		if (trys > 0)
 			cout << "Enter another guess: ";
+		done = 1;
+		while (done != 0)
+		{
+			std::getline(cin, s);
+			istringstream instream(s);
+			instream >> guess;
+			if (!instream)
+				cout << "Please enter integers only." << endl;
+			else
+				done = 0;
+		}
+		if (guess < 0)
+			for (int i = 0; i < Vrandom.size(); i++)
+			{
+				cout << Vrandom[i];
+			}
 	}
 }
