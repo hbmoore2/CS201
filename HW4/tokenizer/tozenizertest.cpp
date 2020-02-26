@@ -14,4 +14,18 @@ int main()
 	cout << "Please enter some text. To exit, type \"end\", \"End\" or \"END\":" << endl;
 	string str;
 	vector<string> tokens;
+
+	while (end != 0)
+	{
+		ReadLine(str);
+		StringToTokenWS(str, tokens);
+
+		if (str == "end")
+			end = 0;
+		if (str == "End")
+			end = 0;
+		if (str == "END")
+			end = 0;
+	}
+	tokens.pop_back();
 }

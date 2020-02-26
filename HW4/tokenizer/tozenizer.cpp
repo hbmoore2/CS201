@@ -16,3 +16,16 @@ bool ReadLine(string & str)
 	else
 		return true;
 }
+unsigned StringToTokenWS(const string& str, vector<string>& tokens)
+{
+	istringstream instream(str);
+	string s;
+	int a = 0;
+	while (a < str.size())
+	{
+		instream >> s;
+		tokens.push_back(s);
+		a = a + s.size() + 1;
+	}
+	return 0;
+}

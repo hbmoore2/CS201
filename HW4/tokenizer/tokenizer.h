@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <vector>
 
@@ -15,6 +16,7 @@ using std::cin;
 using std::endl;
 using std::string;
 using std::vector;
+using std::istringstream;
 
 #ifndef tokenizer_H
 #define tokenizer_H
