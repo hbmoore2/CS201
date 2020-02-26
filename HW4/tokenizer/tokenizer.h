@@ -1,5 +1,5 @@
 //
-//tozenizer.h
+//tokenizer.h
 //Harrison Moore
 //CS201
 //Feb 26, 2020
