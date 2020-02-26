@@ -70,5 +70,32 @@ int main()
 			{
 				cout << Vrandom[i];
 			}
+		int num1;
+		int num2;
+		int num3;
+		int num4;
+
+		num1 = (guess / 1000);
+		Vguess[0] = (num1);
+		num2 = ((guess - num1 * 1000) / 100);
+		Vguess[1] = (num2);
+		num3 = ((guess - num1 * 1000 - num2 * 100) / 10);
+		Vguess[2] = (num3);
+		num4 = (guess - num1 * 1000 - num2 * 100 - num3 * 10);
+		Vguess[3] = (num4);
+
+		bulls = 0;
+		cows = 0;
+
+		for (int i = 0; i < Vrandom.size(); i++)
+		{
+			if (Vguess[i] == Vrandom[i])
+				bulls++;
+			else
+				for (int j = 0; j < Vrandom[i]; j++)
+					if (Vguess[j] == Vrandom[i])
+						cows++;
+		}
+		cout << endl;
 	}
 }
