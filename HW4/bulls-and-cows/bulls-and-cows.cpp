@@ -11,6 +11,7 @@
 #include <vector>
 #include <string>
 #include <cstdlib>
+#include <ctime>
 
 using std::cout;
 using std::cin;
@@ -31,4 +32,19 @@ int main()
 
 	string s;
 	vector<int> Vguess(4);
+
+	cout << "I am going to think of a four digit number." << endl;
+	for (int i = 0; i < 4; i++)
+	{
+		int a = -1;
+		int random;
+		while (a == -1)
+		{
+			srand(time(0));
+			random = (rand() % 10);
+			a = Vrandom[i] = numbers[random];
+			numbers[random] = -1;
+		}
+		cout << ".";
+	}
 }
