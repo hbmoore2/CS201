@@ -176,6 +176,13 @@ int main()
 			}
 		}
 	}
+
+
+	int q;
+	cout << endl;
+	cout << "Program has finished. Enter a character to return: ";
+	cin >> q; //Stops the console from closing after the program has run.
+	return 0;
 }
 // First-In First-Out
 void FifoPush(vector<string>& container, const string& item) //puts item in front
@@ -208,4 +215,18 @@ void LifoPop(vector<string>& container, string& item) // last item
 {
 	cout << container.back() << endl;
 	container.pop_back();
+}
+
+
+bool IsContainerEmpty(const vector<string>& container) // container empty?
+{
+	if (container.size() == 0)
+		return true;
+	else
+		return false;
+}
+void PrintContainer(const vector<string>& container) // what's in the container
+{
+	for (int i = 0; i < container.size(); i++)
+		cout << container[i] << endl;
 }
