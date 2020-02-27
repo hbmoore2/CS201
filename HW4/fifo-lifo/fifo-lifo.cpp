@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <vector>
 
 using std::cout;
 using std::cin;
@@ -16,6 +17,26 @@ using std::vector;
 
 string str;
 int fifolifo;
+int fifo;
+int lifo;
+int yes_no = 1;
+string item;
+vector<string> container;
+
+// First-In First-Out
+void FifoPush(vector<string>& container, const string& item);
+void FifoPop(vector<string>& container, string& item);
+
+// Last-In First-Out
+void LifoPush(vector<string>& container, const string& item);
+void LifoPop(vector<string>& container, string& item);
+
+// Shared functionality
+bool IsContainerEmpty(const vector<string>& container);
+void PrintContainer(const vector<string>& container);
+
+bool TestFifo();
+bool TestLifo();
 
 
 int main()
@@ -27,7 +48,7 @@ int main()
 	while (true)
 	{
 		if (fifolifo > 0) // Notifies the user of what they need to enter.
-			cout << "Please specifically enter \"Fifo\" or \"Lifo\"." << endl;
+			cout << "Please enter \"Fifo\" or \"Lifo\"." << endl;
 		cin >> str;
 		if (str == "Fifo")
 			break;
@@ -36,4 +57,41 @@ int main()
 		fifolifo++;
 	}
 	cout << endl;
+
+	if (str == "Fifo")		//Fifo picked
+	{
+		cout << "You chose Fifo. Enter something to place in your container: ";
+		yes_no = 1;
+		while (yes_no != 0)
+		{
+			if (fifo > 0)
+				cout << "Enter another item to place in your container: ";
+
+			cin >> item;
+			FifoPush(container, item);
+
+			cout << "Would you like to add another item? Enter \"1\" for yes or \"0\" for no: ";
+			cin >> yes_no;
+
+			fifo++;
+		}
+
+		yes_no = 1;
+		while (yes_no != 0)
+		{
+			cout << endl;
+			cout << "Would you like to \"Pop\" the last item out of your container? Enter \"1\" for yes or \"0\" for no: ";
+			cin >> yes_no;
+			if (yes_no == 1)
+			{
+				if (container.size() == 0)
+				{
+					cout << "Your container is empty.";
+					break;
+				}
+				cout << "Your last item was: ";
+				FifoPop(container, item);
+			}
+		}
+	}
 }
