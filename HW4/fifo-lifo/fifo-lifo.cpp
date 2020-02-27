@@ -44,6 +44,20 @@ bool TestLifo();
 
 int main()
 {
+	cout << "Would you like to fill a container? Type \"Yes\" if you do. Or type \"test\" to access the testing functions. ";
+	cin >> answer;
+	if (answer == "yes")
+		finish = 0;
+	else if (answer == "Yes")
+		finish = 0;
+	else if (answer == "YES")
+		finish = 0;
+	else if (answer == "test")
+		finish = 2;
+	else
+		cout << "Oh, okay... Bye then."; // if not yes.
+	cout << endl;
+
 	if (finish == 0)
 	{
 		cout << "Hello, welcome to your container." << endl;
