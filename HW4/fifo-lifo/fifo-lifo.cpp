@@ -94,4 +94,38 @@ int main()
 			}
 		}
 	}
+
+	else if (str == "Lifo") // picked lifo
+	{
+		cout << "You chose Lifo. Enter something to place in your container: ";
+		yes_no = 1;
+		while (yes_no != 0)
+		{
+			if (lifo > 0)
+				cout << "Enter another item to place in your container: ";
+				cin >> item;
+			LifoPush(container, item);
+			cout << "Would you like to add another item? Enter \"1\" for yes or \"0\" for no: ";
+			cin >> yes_no;
+			lifo++;
+		}
+
+		yes_no = 1;
+		while (yes_no != 0)
+		{
+			cout << endl;
+			cout << "Would you like to \"Pop\" the last item out of your container? Enter \"1\" for yes or \"0\" for no: ";
+			cin >> yes_no;
+			if (yes_no == 1)
+			{
+				if (container.size() == 0)
+				{
+					cout << "Your container is empty.";
+					break;
+				}
+				cout << "Your last item was: ";
+				LifoPop(container, item);
+			}
+		}
+	}
 }
