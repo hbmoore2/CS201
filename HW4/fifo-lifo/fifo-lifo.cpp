@@ -176,23 +176,36 @@ int main()
 			}
 		}
 	}
-
-
-
-	// First-In First-Out
-	void FifoPush(vector<string>& container, const string& item) //puts item in front
+}
+// First-In First-Out
+void FifoPush(vector<string>& container, const string& item) //puts item in front
+{
+	int container_size = container.size();
+	if (container_size > 0)
 	{
-		int container_size = container.size();
-		if (container_size > 0)
+		container.resize(container_size + 1);
+		for (int i = (container_size); i > 0; i--)
 		{
-			container.resize(container_size + 1);
-			for (int i = (container_size); i > 0; i--)
-			{
-				container[i] = container[i - 1];
-			}
-			container[0] = item;
+			container[i] = container[i - 1];
 		}
-		else
-			container.push_back(item);
+		container[0] = item;
 	}
+	else
+		container.push_back(item);
+}
+void FifoPop(vector<string>& container, string& item) // last item in container
+{
+	cout << container.back() << endl;
+	container.pop_back();
+}
+
+// Last-In First-Out
+void LifoPush(vector<string>& container, const string& item)
+{
+	container.push_back(item);
+}
+void LifoPop(vector<string>& container, string& item) // last item
+{
+	cout << container.back() << endl;
+	container.pop_back();
 }
