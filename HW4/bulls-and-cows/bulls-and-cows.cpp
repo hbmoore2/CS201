@@ -19,7 +19,7 @@ using std::istringstream;
 void bulls(string guess);
 void cows(string guess);
 
-string ans = "2940";		// ANSWER
+string ans = "6183";		// ANSWER
 string guess = "";			//User's guess
 
 int main()
@@ -29,7 +29,7 @@ int main()
 
 	while(guess != ans)
 	{
-		getline(cin, guess);
+		getline(cin, guess);			//User input
 		int num;
 		istringstream wrong(guess);
 		wrong >> num;
@@ -40,6 +40,7 @@ int main()
 		bulls(guess);
 		cows(guess);
 	}
+	cout << endl;
 	cout << "Congratzzz!!! You guessed all the numbers!" << endl;
 	return 0;
 }
@@ -62,13 +63,13 @@ void cows(string guess)
 {
 	int cows = 0;
 
-	if (guess.at(0) == '4' || guess.at(0) == '2' || guess.at(0) == '0')
+	if (guess.at(0) == '1' || guess.at(0) == '8' || guess.at(0) == '3')
 		cows++;
-	if (guess.at(1) == '7' || guess.at(1) == '2' || guess.at(1) == '0')
+	if (guess.at(1) == '6' || guess.at(1) == '8' || guess.at(1) == '3')
 		cows++;
-	if (guess.at(2) == '7' || guess.at(2) == '4' || guess.at(2) == '0')
+	if (guess.at(2) == '6' || guess.at(2) == '1' || guess.at(2) == '3')
 		cows++;
-	if (guess.at(3) == '7' || guess.at(3) == '4' || guess.at(3) == '2')
+	if (guess.at(3) == '6' || guess.at(3) == '1' || guess.at(3) == '8')
 		cows++;
 	if (cows == 0 || cows > 1)		// correct number, wrong place
 		cout << cows << " cows" << endl;		//plural
