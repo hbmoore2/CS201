@@ -16,6 +16,9 @@ using std::endl;
 using std::string;
 using std::istringstream;
 
+void bulls(string guess);
+void cows(string guess);
+
 string ans = "2940";		// ANSWER
 string guess = "";			//User's guess
 
@@ -34,5 +37,41 @@ int main()
 		{
 			cout << "Enter only 4 digits!" << endl;
 		}
+		bulls(guess);
+		cows(guess);
 	}
+	cout << "Congratzzz!!! You guessed all the numbers!" << endl;
+	return 0;
+}
+
+void bulls(string guess)
+{
+			int bulls = 0;
+			for (int i = 0; i < 4; i++)
+			{
+				if (ans.at(i) == guess.at(i))
+						bulls++;
+			}
+			if (bulls == 0 || bulls > 1)			//plural
+				cout << bulls << " bulls and ";
+			else if(bulls == 1)						//singular
+				cout << bulls << " bull and ";
+}
+
+void cows(string guess)
+{
+	int cows = 0;
+
+	if (guess.at(0) == '4' || guess.at(0) == '2' || guess.at(0) == '0')
+		cows++;
+	if (guess.at(1) == '7' || guess.at(1) == '2' || guess.at(1) == '0')
+		cows++;
+	if (guess.at(2) == '7' || guess.at(2) == '4' || guess.at(2) == '0')
+		cows++;
+	if (guess.at(3) == '7' || guess.at(3) == '4' || guess.at(3) == '2')
+		cows++;
+	if (cows == 0 || cows > 1)		// correct number, wrong place
+		cout << cows << " cows" << endl;		//plural
+	else if (cows == 1)
+		cout << cows << " cow" << endl;			//singular
 }
