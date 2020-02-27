@@ -192,7 +192,36 @@ int main()
 			}
 		}
 	}
+	if (finish == 2) // For test functions
+	{
+		fifolifo = 0;
+		cout << "Enter \"Fifo\" to test Fifo or \"Lifo\" to test Lifo: ";
+		while (true)
+		{
+			b = false;
+			yes_no = 0;
+			if (fifolifo > 0)
+				cout << "Please enter \"Fifo\" or \"Lifo\"." << endl;
+			cin >> str;
+			if (str == "Fifo")
+				b = TestFifo();
+			if (str == "Lifo")
+				b = TestLifo();
+			if (b)
+				cout << "The container was filled and emptied properly." << endl; // works
+			else
+				cout << "There was a problem. " << endl; // doesn't work
 
+			cout << endl;
+
+			cout << "If you want to test the other one, enter \"1\" for yes or \"0\" for no: ";
+			cin >> yes_no;
+			if (yes_no == 0)
+				break;
+			fifolifo++;
+		}
+
+	}
 
 	int q;
 	cout << endl;
