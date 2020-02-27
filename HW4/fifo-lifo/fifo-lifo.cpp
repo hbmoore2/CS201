@@ -128,4 +128,9 @@ int main()
 			}
 		}
 	}
+	finish = 3; // items in container
+	cout << "Do want to know what is in your container? Type: yes or no: ";
+	while (finish != 0)
+	{
+		cin >> answer;
 }
