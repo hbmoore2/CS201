@@ -19,11 +19,13 @@ string str;
 string item;
 string answer;
 vector<string> container;
+vector<string> test{ "A" , "B" , "C" , "D" };
 int fifolifo;
 int fifo;
 int lifo;
 int yes_no = 1;
 int finish = 1;
+int confirm_test;
 bool b;
 
 // First-In First-Out
@@ -244,3 +246,35 @@ void PrintContainer(const vector<string>& container) // what's in the container
 	for (int i = 0; i < container.size(); i++)
 		cout << container[i] << endl;
 }
+
+bool TestFifo() // Test function
+{
+	confirm_test = 0;
+	for (int i = 0; i < test.size(); i++)
+	{
+		item = test[i];
+		FifoPush(container, item);
+	}
+
+	if (container[3] == test[0])
+		confirm_test++;
+	if (container[2] == test[1])
+		confirm_test++;
+	if (container[1] == test[2])
+		confirm_test++;
+	if (container[0] == test[3])
+		confirm_test++;
+
+	for (int i = 0; i < test.size(); i++)
+	{
+		FifoPop(container, item);
+	}
+	if (container.size() > 0) // emptied correctly
+		confirm_test = 0;
+
+	if (confirm_test == 4)
+		return true;
+	else
+		return false;
+}
+
