@@ -247,7 +247,7 @@ void PrintContainer(const vector<string>& container) // what's in the container
 		cout << container[i] << endl;
 }
 
-bool TestFifo() // Test function
+bool TestFifo() // Fifo test function
 {
 	confirm_test = 0;
 	for (int i = 0; i < test.size(); i++)
@@ -278,3 +278,33 @@ bool TestFifo() // Test function
 		return false;
 }
 
+bool TestLifo() // Lifo test function
+{
+	confirm_test = 0;
+	for (int i = 0; i < test.size(); i++)
+	{
+		item = test[i];
+		LifoPush(container, item);
+	}
+
+	if (container[0] == test[0])
+		confirm_test++;
+	if (container[1] == test[1])
+		confirm_test++;
+	if (container[2] == test[2])
+		confirm_test++;
+	if (container[3] == test[3])
+		confirm_test++;
+
+	for (int i = 0; i < test.size(); i++)
+	{
+		LifoPop(container, item);
+	}
+	if (container.size() > 0) // emptied correctly
+		confirm_test = 0;
+
+	if (confirm_test == 4)
+		return true;
+	else
+		return false;
+}
