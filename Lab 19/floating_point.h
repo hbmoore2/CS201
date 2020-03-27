@@ -12,6 +12,7 @@
 using std::cout;
 using std::endl;
 using std::vector;
-const double PI = std::acos(-1);
+using std::size_t;
+const double M_PI = std::acos(-1);
 
 vector<double> degreesToRadians(int degree);
