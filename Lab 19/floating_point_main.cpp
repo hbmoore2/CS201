@@ -11,6 +11,8 @@
 int main()
 {
 	vector<double> radians = degreesToRadians(360);
+
+		// prints out the list
 	cout << "degree, cos, sin" << endl;
 	for (size_t i = 0; i < radians.size(); i++)
 	{

@@ -7,10 +7,18 @@
 //
 
 #include "floating_point.h"
+#define _USE_MATH_DEFINES
+
 
 vector<double> degreesToRadians(int degrees)
 {
 	vector<double> radians(degrees + 1);
-	
+	double compute_radian;
+
+	for (int degree = 0; degree <= degrees; degree++)
+	{
+		compute_radian = (degree * (PI / 180.0));
+		radians[degree] = compute_radian;
+	}
 	return radians;
 }
