@@ -3,7 +3,7 @@
 //Harrison Moore
 //CS201
 //Mar 23, 2020
-//This program will...
+//This program will calculate radians from degrees.
 //
 
 #include "floating_point.h"

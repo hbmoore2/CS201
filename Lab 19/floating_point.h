@@ -3,11 +3,12 @@
 //Harrison Moore
 //CS201
 //Mar 23, 2020
-//This program will...
+//This program will declare the other floating_point files as a function.
 //
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 using std::cout;
 using std::endl;
 using std::vector;
