@@ -1,9 +1,14 @@
+// truncstruct.h
+// Glenn G. Chappell
+// 19 Mar 2018
 //
-//truncstruct.h
-//Harrison Moore
-//CS201
-//April 1, 2020
+// For CS 201 Spring 2018
+// Header for functions trunc8, trunc
+// struct version
 //
+// Modified 01/31/19
+// John Quan
+// For CS 201 Fall 2019
 
 #ifndef FILE_TRUNCSTRUCT_HPP_INCLUDED
 #define FILE_TRUNCSTRUCT_HPP_INCLUDED
@@ -37,3 +42,4 @@ StringInfo trunc(const StringInfo& stringInfo);
 StringInfo trunc8(const std::string& str);
 
 #endif //#ifndef FILE_TRUNCSTRUCT_HPP_INCLUDED
+

@@ -1,9 +1,14 @@
+// truncstruct.cpp
+// Glenn G. Chappell
+// 19 Nov 2018
 //
-//truncstruct.cpp
-//Harrison Moore
-//CS201
-//April 1, 2020
+// For CS 201 Spring 2018
+// Source for functions trunc8, trunc
+// struct version
 //
+// Modified 10/24/18
+// Chris Hartman
+// For CS 201 Fall 2018
 
 #include "truncstruct.hpp"
 // For struct StringInfo definition
