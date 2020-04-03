@@ -68,4 +68,8 @@ int main(int argc, char** argv)
     button2->labelfont(FL_BOLD + FL_ITALIC);
     button2->labelsize(12);
     button2->value();
+
+    window->end();
+    window->show(argc, argv);
+    return Fl::run();
 }
