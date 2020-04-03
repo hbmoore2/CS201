@@ -139,6 +139,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="fltk-truc.cpp" />
+    <ClCompile Include="truncstruct.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="truncstruct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
