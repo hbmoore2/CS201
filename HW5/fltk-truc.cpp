@@ -37,14 +37,14 @@ int main(int argc, char** argv)
     box2->labelfont(FL_ITALIC);
     box2->labelsize(12);
 
- //User input (string)
+//User input (string)
     Fl_Input* input1 = new Fl_Input(140, 90, 130, 20, "Type in a string:");
     input1->box(FL_UP_BOX);
     input1->labelfont(FL_ITALIC);
     input1->labelsize(12);
     input1->value("");
 
- //User input (Integer)
+//User input (Integer)
     Fl_Box* box3 = new Fl_Box(60, 120, 300, 20, "Enter the number of characters you want to truncate.");
     box3->box(FL_UP_BOX);
     box3->labelfont(FL_ITALIC);
@@ -55,10 +55,17 @@ int main(int argc, char** argv)
     input2->labelsize(12);
     input2->value(integer);
 
- //Truncate button
+//Truncate button
     Fl_Button* button1 = new Fl_Button(130, 180, 100, 20, "Truncate");
     button1->box(FL_UP_BOX);
     button1->labelfont(FL_BOLD + FL_ITALIC);
     button1->labelsize(12);
     button1->value();
+
+//Quit button
+    Fl_Button* button2 = new Fl_Button(250, 180, 100, 20, "Quit");
+    button2->box(FL_UP_BOX);
+    button2->labelfont(FL_BOLD + FL_ITALIC);
+    button2->labelsize(12);
+    button2->value();
 }
