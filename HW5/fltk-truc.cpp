@@ -8,7 +8,6 @@
 
 #include "truncstruct.h"
 #include <iostream>
-#include <string>
 #include <FL/Fl.h>
 #include <FL/Fl_Box.h>
 #include <FL/Fl_Window.h>
@@ -16,10 +15,7 @@
 #include <FL/Fl_Output.h>
 #include <FL/Fl_Value_Input.h>
 #include <FL/Fl_Button.h>
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
+
 
 int integer;
 
@@ -49,7 +45,7 @@ int main(int argc, char** argv)
     box3->box(FL_UP_BOX);
     box3->labelfont(FL_ITALIC);
     box3->labelsize(12);
-    Fl_Value_Input* input2 = new Fl_Value_Input(150, 150, 130, 20, "Pick an integer:");
+    Fl_Value_Input* input2 = new Fl_Value_Input(150, 150, 130, 20, "Type an integer:");
     input2->box(FL_UP_BOX);
     input2->labelfont(FL_ITALIC);
     input2->labelsize(12);
@@ -68,6 +64,13 @@ int main(int argc, char** argv)
     button2->labelfont(FL_BOLD + FL_ITALIC);
     button2->labelsize(12);
     button2->value();
+
+//Output
+    Fl_Output* output = new Fl_Output(180, 210, 200, 30, "Truncated string:");
+    output->box(FL_UP_BOX);
+    output->labelfont(FL_ITALIC);
+    output->labelsize(12);
+    output->value();
 
     window->end();
     window->show(argc, argv);
