@@ -8,14 +8,16 @@
 
 #include "truncstruct.h"
 #include <iostream>
+#include <string>
 #include <FL/Fl.h>
 #include <FL/Fl_Box.h>
 #include <FL/Fl_Window.h>
 #include <FL/Fl_Input.h>
+#include <FL/Fl_Output.h>
 using std::cout;
 using std::cin;
 using std::endl;
-
+using std::string;
 
 int integer;
 
@@ -32,4 +34,11 @@ int main(int argc, char** argv)
     box2->box(FL_UP_BOX);
     box2->labelfont(FL_ITALIC);
     box2->labelsize(12);
+
+ //User input (string)
+    Fl_Input* input1 = new Fl_Input(140, 90, 130, 20, "Type in a string:");
+    input1->box(FL_UP_BOX);
+    input1->labelfont(FL_ITALIC);
+    input1->labelsize(12);
+    input1->value("");
 }
