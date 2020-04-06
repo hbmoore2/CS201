@@ -16,7 +16,6 @@
 #include <FL/Fl_Value_Input.h>
 #include <FL/Fl_Button.h>
 
-
 int integer;
 
 int main(int argc, char** argv)
