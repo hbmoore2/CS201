@@ -59,3 +59,36 @@ int main()
 	}
 	return 0;
 }
+
+void printInventory(std::map<std::string, Record>& inventory)
+{
+	for (auto item : inventory)
+	{
+		cout << "We have " << item.second.units << " " << item.first << "s for " << item.second.unitPrice << " $ each. " << endl;
+	}
+}
+
+void buy(std::map<std::string, Record>& inventory, double& total)
+{
+	cout << "What would you like to buy? ";
+	std::string item;
+	getline(cin, item);
+	if (inventory[item].units > 0)
+	{
+		inventory[item].units -= 1;
+		total += inventory[item].unitPrice;
+	}
+	else
+	{
+		cout << endl << "We are out of stock on that item." << endl;
+	}
+}
+
+void drop(std::map<std::string, Record>& inventory, double& total)
+{
+	cout << "What would you like to remove from your cart?";
+	std::string item;
+	getline(cin, item);
+	inventory[item].units += 1;
+	total -= inventory[item].unitPrice;
+}
