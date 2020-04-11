@@ -119,3 +119,24 @@ int RandomBetweenN(
     std::normal_distribution<> normal_dist(mean, ((last - first) / 4));
     return normal_dist(e2);
 }
+
+// Returns a random number between first and last using rand() varies with time
+int RandomBetween(
+    const int& first,
+    const int& last)
+{
+    int random_number = first + (rand() % (last - first + 1));
+    return random_number;
+}
+
+// Prints a list of the random numbers showing normal or uniform distribution
+void PrintDistribution(
+    const map<int, int>& numbers,
+    const int& star)
+{
+    for (auto p : numbers) {
+        cout << std::fixed << std::setprecision(1) << std::setw(2)
+            // Replaced the 200 with a variable that changes with the difference between first and last.
+            << p.first << ' ' << std::string(p.second / star, '*') << '\n';
+    }
+}
