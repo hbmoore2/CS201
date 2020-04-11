@@ -64,7 +64,7 @@ int main()
 	map<string, int> usedGuesses; // Stores letters used in guesses.
 	int attempts = answer.size() * 2; // Gets 6 tries
 	int win = 0;
-	cout << "*WELCOME TO THE GAME OF HANGMAN*" << endl;
+	cout << "*WELCOME TO THE GAME OF HANGMAN*" << endl << endl;
 	while (attempts != 0 && win == 0)
 	{
 		cout << "Attempts left: " << attempts << endl;
@@ -87,7 +87,7 @@ int main()
 			}
 			else
 			{
-				cout << guess << " is incorrect. Try again!" << endl;
+				cout << guess << " is incorrect." << endl;
 				usedGuesses[guess] = attempts;
 				attempts--;
 			}
@@ -95,12 +95,12 @@ int main()
 		// Will end loop if correct
 		else if (guess == "sky")
 		{
-			cout << "The word is correct! The answer is sky!" << endl;
+			cout << "Correct! The answer is sky!" << endl;
 			win = 1;
 		}
 		else
 		{
-			cout << guess << " is incorrect! " << endl;
+			cout << guess << " is incorrect. " << endl;
 			usedGuesses[guess] = attempts;
 			attempts--;
 		}
