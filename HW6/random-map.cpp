@@ -96,3 +96,14 @@ int main()
 
     cin >> last;
 }
+
+// Returns a uniform random number between first and last
+int RandomBetweenU(
+    const int& first,
+    const int& last,
+    random_device& r)
+{
+    std::default_random_engine e1(r());
+    std::uniform_int_distribution<int> uniform_dist(first, last);
+    return uniform_dist(e1);
+}
