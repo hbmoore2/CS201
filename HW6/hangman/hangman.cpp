@@ -55,3 +55,25 @@ bool AllLettersFound(vector<string>& answer, vector<string>& blank)
 	else
 		return false;
 }
+
+int main()
+{
+	vector<string> answer{ "s","k","y" };
+	vector<string> blank{ "_","_","_" };
+	string guess; //The letter guessed
+	map<string, int> usedGuesses; // Stores letters used in guesses.
+	int attempts = answer.size() * 2; // Gets 6 tries
+	int win = 0;
+	cout << "*WELCOME TO THE GAME OF HANGMAN*" << endl;
+	while (attempts != 0 && win == 0)
+	{
+		cout << "Attempts left: " << attempts << endl;
+		blankSpace(blank);
+		cout << endl << "Guess a letter or the word: ";
+		getline(cin, guess);
+		if (alreadyGuessed(usedGuesses, guess))
+		{
+			cout << "You already guessed that! Type in a different letter." << endl;
+			continue;
+		}
+}
