@@ -28,7 +28,7 @@ int main()
 	std::string action;
 	std::map<std::string, Record > inventory;
 	inventory["Napkin"] = { 5.0,5 };
-	inventory["toilet paper roll"] = { 50.0,4 };
+	inventory["toilet paper"] = { 50.0,4 };
 	inventory["apple"] = { 1.0,15 };
 	inventory["egg"] = { 3.0,10 };
 	inventory["potato chip"] = { 4.0,8 };
