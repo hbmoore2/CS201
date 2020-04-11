@@ -48,6 +48,23 @@ int main()
     std::seed_seq seed2{ r(), r(), r(), r(), r(), r(), r(), r() };
     mt19937 e2(seed2);
 
+    std::srand(std::time(nullptr));
+
+    int first;
+    cout << "First Value: ";
+    cin >> first;
+
+    int last;
+    cout << "Last Value: ";
+    cin >> last;
+
+    while ((last - first) < 4)
+    {
+        cout << "The difference between first and last needs to be at least 4." << endl;
+        cout << "Last: ";
+        cin >> last;
+    }
+
 
     int mean = (first + last) / 2;
     int star = (1000 / (last - first));
@@ -67,4 +84,15 @@ int main()
     {
         ++hist3[std::round(RandomBetween(first, last))];
     }
+
+    cout << "Uniform distribution between " << first << " and " << last << ":\n";
+    PrintDistribution(hist1, star);
+
+    cout << "Normal distribution around " << mean << ":\n";
+    PrintDistribution(hist2, star);
+
+    cout << "Random distribution between " << first << " and " << last << ":\n";
+    PrintDistribution(hist3, star);
+
+    cin >> last;
 }
