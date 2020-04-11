@@ -76,4 +76,42 @@ int main()
 			cout << "You already guessed that! Type in a different letter." << endl;
 			continue;
 		}
+		if (guess.length() == 1) // determines if the guess is a letter or a word
+		{
+			if (isCorrect(answer, guess))
+			{
+				cout << guess << " is correct! " << endl;
+				usedGuesses[guess] = attempts;
+				attempts--;
+				showLetter(answer, blank, guess);
+			}
+			else
+			{
+				cout << guess << " is incorrect. Try again!" << endl;
+				usedGuesses[guess] = attempts;
+				attempts--;
+			}
+		}
+		// Will end loop if correct
+		else if (guess == "sky")
+		{
+			cout << "The word is correct! The answer is sky!" << endl;
+			win = 1;
+		}
+		else
+		{
+			cout << guess << " is incorrect! " << endl;
+			usedGuesses[guess] = attempts;
+			attempts--;
+		}
+		if (AllLettersFound(answer, blank))
+		{
+			cout << "The word is complete! The answer is sky!" << endl;
+			win = 1;
+		}
+	}
+	if (attempts == 0)
+	{
+		cout << "You're all out of attempts! Try again!";
+	}
 }
