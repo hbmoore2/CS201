@@ -35,4 +35,27 @@ int main()
 	double total = 0;
 	printInventory(inventory);
 	cout << "You can 'view', 'buy', 'exit', or 'remove item'." << endl;
+	while (true)
+	{
+		getline(cin, action);
+		std::transform(action.begin(), action.end(), action.begin(), ::tolower);
+		if (action == "view")
+		{
+			printInventory(inventory);
+		}
+		else if (action == "buy")
+		{
+			buy(inventory, total);
+		}
+		else if (action == "exit")
+		{
+			break;
+		}
+		else if (action == "remove item")
+		{
+			drop(inventory, total);
+		}
+		cout << "Current total is: " << total << "$" << endl;
+	}
+	return 0;
 }
