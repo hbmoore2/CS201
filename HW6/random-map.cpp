@@ -107,3 +107,15 @@ int RandomBetweenU(
     std::uniform_int_distribution<int> uniform_dist(first, last);
     return uniform_dist(e1);
 }
+
+// Returns a normally distributed random number between first and last
+int RandomBetweenN(
+    const int& first,
+    const int& last,
+    const int& mean,
+    mt19937& e2)
+{
+    // Spreads out the numbers around the mean
+    std::normal_distribution<> normal_dist(mean, ((last - first) / 4));
+    return normal_dist(e2);
+}
