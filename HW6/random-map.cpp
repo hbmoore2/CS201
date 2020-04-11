@@ -3,7 +3,7 @@
 //Harrison Moore
 //CS201
 //April 10, 2020
-//This program will..
+//This program will print out distributions given number values from the user.
 //
 
 #include <iostream>
@@ -61,7 +61,7 @@ int main()
     while ((last - first) < 4)
     {
         cout << "The difference between first and last needs to be at least 4." << endl;
-        cout << "Last: ";
+        cout << "Last Value: ";
         cin >> last;
     }
 
@@ -115,12 +115,11 @@ int RandomBetweenN(
     const int& mean,
     mt19937& e2)
 {
-    // Spreads out the numbers around the mean
     std::normal_distribution<> normal_dist(mean, ((last - first) / 4));
     return normal_dist(e2);
 }
 
-// Returns a random number between first and last using rand() varies with time
+// Returns a random number between first and last
 int RandomBetween(
     const int& first,
     const int& last)
@@ -136,7 +135,6 @@ void PrintDistribution(
 {
     for (auto p : numbers) {
         cout << std::fixed << std::setprecision(1) << std::setw(2)
-            // Replaced the 200 with a variable that changes with the difference between first and last.
-            << p.first << ' ' << std::string(p.second / star, '*') << '\n';
+        << p.first << ' ' << std::string(p.second / star, '*') << '\n';
     }
 }
