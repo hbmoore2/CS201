@@ -20,7 +20,7 @@ vector <int> data3{ 2, 6, 2, 3, 6, 7, 9, 4, 1, 0, 7, 3, 6, 3, 5, 2 };
 int main()
 {
 	auto iter1 = data1.begin();
-	auto iter2 = data2.begin();
+	auto iter2 = data3.begin();
 	auto data_mismatch = std::mismatch(iter1, data1.end(), iter2);
 	auto number_of = data_mismatch.first;
 	if (data_mismatch.first == data1.end())
