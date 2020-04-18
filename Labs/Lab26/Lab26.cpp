@@ -12,25 +12,42 @@
 #include <utility>
 #include <vector>
 #include <string>
-
+#include <functional>
 #include "lambdas.h"
+using std::cout;
+using std::endl;
+using std::cin;
+using std::pair;
+using std::vector;
+using std::string;
 
-int main() {
+
+int main()
+{
 
 	// TODO: REQUIRED
 	//       Create a vector<pair<size_t, string>> to enumerate
 	//       each string in the WIKIPEDIA_CPP string vector.
-
+	vector<pair<size_t, string>> WIKIPEDIA_CPP_size(WIKIPEDIA_CPP.size());
+	for (size_t i = 0; i < WIKIPEDIA_CPP.size(); i++)
+	{
+		WIKIPEDIA_CPP_size[i].second = WIKIPEDIA_CPP[i];
+		WIKIPEDIA_CPP_size[i].first = WIKIPEDIA_CPP_size[i].second.size();
+	}
+	auto iter1 = WIKIPEDIA_CPP_size.begin();
+	auto iter2 = WIKIPEDIA_CPP_size.end();
 
 
 	// TODO: REQUIRED
 	//       Use std::sort with a comparison lambda function that sorts
 	//       the vector pairs with the first member in descending order.
-
+	sort(iter1, iter2, [](auto a, auto b) {return a > b; });
 
 
 	// TODO: REQUIRED
 	//       Use printVectorPairs() to print the vector
+
+	cout << printVectorPairs(iter1, iter2);
 
 
 
