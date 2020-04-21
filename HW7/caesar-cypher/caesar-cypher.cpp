@@ -2,7 +2,7 @@
 //Harrison Moore
 //CS201
 //April 20, 2020
-//This program will...
+//This program will reveal a message.
 //
 
 #include <string>
@@ -78,6 +78,19 @@ int main()
 	}
 }
 
-
+// Takes the inputted string and divides it into tokens.
+unsigned StringToTokenWS(const string& user_string, vector<string>& tokens)
+{
+	istringstream instream(user_string);
+	string s;
+	int n = 0;
+	while (n < user_string.size()) // This is used to add all of the parts of 
+								   // the inputed string or line into the vector tokens.
+	{
+		instream >> s;
+		tokens.push_back(s);
+		n = n + s.size() + 1; // Here the part's size and the space after it are added to n.
+	}						  // When (n > size of str) then the while loop stops.
+	tokens.push_back("");
 	return 0;
 }
