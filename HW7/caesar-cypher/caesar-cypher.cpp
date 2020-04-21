@@ -6,14 +6,15 @@
 //
 
 #include <string>
-using std::string;
 #include <iostream>
+#include <sstream>
+#include <vector>
+using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
-#include <sstream>
 using std::istringstream;
-#include <vector>
+
 using std::vector;
 
 unsigned StringToTokenWS(const string& user_string, vector<string>& tokens);
@@ -35,5 +36,48 @@ int main()
 			break;
 		else
 			StringToTokenWS(user_string, tokens);
+		// Asks for an amount to shift the characters over
+		cout << "Enter an integer to use as the shift: ";
+		while (true)
+		{
+			std::getline(cin, cypher_shift_str);
+			istringstream instream(cypher_shift_str);
+			instream >> cypher_shift_val;
+			if (instream) // Confirms if there is an int value in cypher_shift_str
+				break;
+			else
+				cout << "You need to enter an integer: ";
+		}
+
+		// Makes cypher_shift_val positive to prevent problems when changing char values
+		while (cypher_shift_val < 0)
+			cypher_shift_val += 26;
+
+		// Divides the tokens into chars and outputs them onto the console
+		char c;
+		cout << endl;
+		cout << "Cyphered message: ";
+		for (size_t i = 0; i < tokens.size(); i++)
+		{
+			istringstream instream(tokens[i]);
+			for (size_t j = 0; j < tokens[i].size(); j++)
+			{
+				instream >> c;
+				if (c > 96)
+					if (c < 123)
+						c = 97 + ((c - 97 + cypher_shift_val) % 26);
+				if (c < 91)
+					if (c > 64)
+						c = 65 + ((c - 65 + cypher_shift_val) % 26);
+				cout << c;
+			}
+			cout << " ";
+		}
+		cout << endl;
+		cout << endl;
 	}
+}
+
+
+	return 0;
 }
