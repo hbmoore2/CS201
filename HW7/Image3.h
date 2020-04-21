@@ -3,7 +3,7 @@
 // Original Author: Jonathan Metzgar
 // CS 201 course
 #ifndef IMAGE3_H
-#define IMAGE3_Cpp
+#define IMAGE3_CPP
 
 #include <iostream>
 #include <vector>
