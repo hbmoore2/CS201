@@ -2,10 +2,10 @@
 // Implementation for Color3 class
 // Original Author: Jonathan Metzgar
 // CS 201 course
+
 #include <iomanip>
 #include "Color3.h"
 
-using std::setw;
 
 // Ensure values are in the range 0 to maxvalue
 constexpr int saturate(int x, int maxvalue) {
@@ -24,40 +24,39 @@ Color3::Color3(int R, int G, int B) {
 
 int Color3::weightedSum() const {
 	// Implement Y = 0.2126R + 0.7152G + 0.0722B
-	int Y = 0.2126 * R + 0.7152 * G + 0.0722 * B;
 	// Ensure values are inside the range 0 to 255
-	if (Y < 0)
-		Y = 0;
-	if (Y > 255)
-		Y = 255;
-	return Y;
+	return saturate(0.2126 * r + 0.7152 * g + 0.0722 * b, 255);
 }
 
 char Color3::asciiValue() const {
 	// Use at least 16 characters, sort these from dark to light
 	// or light to dark and then map the weightedSum() to the range
 	// 0 to 15. Please pick your own characters
-
-	// For char values I'm using a set that I found on a site that converted images to ascii.
-	// It looks a little better than the set of chars I came up with (to the right).
-	const char values[] = "MNmdhysso+/:-.`.";// "#80kbha;oc*\",-. ";
-	unsigned darkness = 0;
-	int Wsum = weightedSum();
-	darkness = 16 - (Wsum / 16); // Invertes the darkness levels (characters are brighter)
+	const char values[] = "@#%DAKOIif:;'.-";
+	unsigned darkness = 14 - (weightedSum() / 15) % 15;
 	return values[darkness];
 }
 
 // Stream Operators for input and output
 
 std::ostream& operator<<(std::ostream& ostr, const Color3& color) {
-	ostr << setw(3) << (int)color.r << " ";
-	ostr << setw(3) << (int)color.g << " ";
-	ostr << setw(3) << (int)color.b << " ";
+	ostr << std::setw(3) << (int)color.r << " ";
+	ostr << std::setw(3) << (int)color.g << " ";
+	ostr << std::setw(3) << (int)color.b << " ";
 	return ostr;
 }
 
 std::istream& operator>>(std::istream& istr, Color3& color) {
 	// Implement your own input for a Color3
+
+	int r, g, b;
+	istr >> r;
+	istr >> g;
+	istr >> b;
+
+	color.r = saturate(r, 255);
+	color.g = saturate(g, 255);
+	color.b = saturate(b, 255);
 
 	return istr;
 }
