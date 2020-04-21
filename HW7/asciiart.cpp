@@ -14,3 +14,10 @@ struct RGB
 	int G = 0;
 	int B = 0;
 };
+vector <RGB> Total_data;
+
+int main()
+{
+		// width and height
+	Image3 image(80, 80);
+}
