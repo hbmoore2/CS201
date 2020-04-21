@@ -139,6 +139,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="asciiart.cpp" />
+    <ClCompile Include="Color3.cpp" />
+    <ClCompile Include="Image3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Color3.h" />
+    <ClInclude Include="Image3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
