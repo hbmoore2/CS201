@@ -50,8 +50,8 @@ int main()
 	toString(class1, class2);
 
 	Lab33 class3 = class1;
-	cout << "class3 copied class1: " << endl;
-	cout << "class3's value: " << class3.getter();
+	cout << "class3 copied class1 - ";
+	cout << "class3's value: " << class3.getter() << endl; // prints class3's value
 
 	cout << endl;
 }
@@ -62,6 +62,6 @@ int Lab33::getter() { return value; }
 
 void toString(Lab33 object1, Lab33 object2)
 {
-	cout << "class1's value: " << object1.getter() << endl;
-	cout << "class2's value: " << object2.getter() << endl;
+	cout << "class1's value: " << object1.getter() << endl << endl; //prints class1&2's values
+	cout << "class2's value: " << object2.getter() << endl << endl;
 }
