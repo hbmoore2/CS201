@@ -9,9 +9,9 @@
 #ifndef thermostat_H
 #define thermostat_H
 
-#include "Simulator.h"
-#include "Environment.h"
-#include "Agent.h"
+#include "simulator.h"
+#include "environment.h"
+#include "agent.h"
 
 #include <iostream>
 using std::cout;
