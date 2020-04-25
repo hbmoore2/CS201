@@ -24,14 +24,14 @@ public:
 	environment() : _world{ 0, 0, 0, 0, 0, 0, 0, 0, 0 } {};
 	void dirt(int& moves, random_device& r); // Randomly puts down dirt
 
-	vector<int> _world; // Vector representing the world
+	vector<int> _world;
 };
 
 class agent
 {
 public:
 	agent() : _moves{ 0 }, _pos{ 0 }, _left{ false }, _right{ false }, _vacuum{ false }{};
-	void get_dirt_loc(environment& house); // dirt location
+	void get_dirt_loc(environment& house);	// dirt location
 	void vac_it(environment& house);		//no dirt left :)
 
 	int _moves;		// Number of moves made by the vacuum
@@ -45,7 +45,7 @@ class simulator
 {
 public:
 	void move(agent& vac);		// Moves the vacuum
-	void simulate(int& repeat); // Simulates the world
+	void simulate(int& repeat);
 };
 
 #define vacuumcleanerworld_H

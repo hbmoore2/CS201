@@ -15,7 +15,6 @@ int main()
 	Neo.simulate(repeat);
 }
 
-// Class member functions below in order of creation
 
 // Randomly puts down dirt
 void environment::dirt(int& moves, random_device& r)
@@ -83,7 +82,7 @@ void simulator::move(agent& vac)
 		vac._pos -= 1;
 }
 
-//agent tells environment there is nothing left
+
 void agent::vac_it(environment& house)
 {
 	if (_vacuum)
