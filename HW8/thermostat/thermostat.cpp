@@ -12,9 +12,4 @@ int main()
 {
 	Simulator Neo;
 	Neo.run();
-
-	// Stops the console from closing.
-	cout << "Program end" << endl;
-	int q;
-	cin >> q;
 }
