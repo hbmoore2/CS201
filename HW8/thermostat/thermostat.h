@@ -12,7 +12,6 @@
 #include "simulator.h"
 #include "environment.h"
 #include "agent.h"
-
 #include <iostream>
 #include <vector>
 #include <cstdlib>
