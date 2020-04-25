@@ -138,15 +138,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="agent.cpp" />
-    <ClCompile Include="environment.cpp" />
-    <ClCompile Include="simulator.cpp" />
     <ClCompile Include="vacuum-cleaner-world.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="agent.h" />
-    <ClInclude Include="environment.h" />
-    <ClInclude Include="simulator.h" />
     <ClInclude Include="vacuum-cleaner-world.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

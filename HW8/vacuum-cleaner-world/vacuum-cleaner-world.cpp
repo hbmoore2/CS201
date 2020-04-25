@@ -50,17 +50,17 @@ void agent::get_dirt_loc(environment& house)
 			}
 		}
 	};
-	cout << "Robot obective: ";
+	cout << "Vacuum cleaning in progress..." << endl << endl;
 	if (close_dirt > _pos)
 	{
-		cout << "right" << endl;
+		cout << "Right" << endl;
 		_right = true;
 		_left = false;
 		_vacuum = false;
 	}
 	if (close_dirt < _pos)
 	{
-		cout << "left" << endl;
+		cout << "Left" << endl;
 		_left = true;
 		_right = false;
 		_vacuum = false;
@@ -106,7 +106,7 @@ void simulator::simulate(int& repeat)
 		for (size_t i = 0; i < house._world.size(); i++)
 		{
 			if (vac._pos == i)
-				cout << "[=]"; // vacuum
+				cout << "[<=>]"; // vacuum
 			else
 				cout << "   ";
 		}
@@ -120,7 +120,7 @@ void simulator::simulate(int& repeat)
 			move(vac);
 		else
 		{
-			Sleep(0200); // Gives some delay to see the vacuum cleaning
+			Sleep(0200);
 			vac.vac_it(house);
 		}
 		vac._moves++;

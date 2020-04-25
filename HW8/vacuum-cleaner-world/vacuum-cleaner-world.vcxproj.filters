@@ -18,27 +18,9 @@
     <ClCompile Include="vacuum-cleaner-world.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="agent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="environment.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="simulator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vacuum-cleaner-world.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="agent.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="environment.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="simulator.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
