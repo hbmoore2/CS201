@@ -13,12 +13,12 @@ void Simulator::askOwner() // Asks whether to continue or not
 	int select;
 	if (_iter_count > 0)
 	{
-		cout << setw(9) << right << "1) " << "Continue" << endl;
-		cout << setw(9) << right << "2) " << "Quit" << endl;
-		cout << setw(6) << right << "E" << "nter a number to select an option: ";
+		cout << right << "\n1) " << "Continue" << endl;
+		cout << right << "2) " << "Quit" << endl;
+		cout << right << "Enter 1 to Continue or 2 to Quit: ";
 
 
-		while (true) // Gets the users selection
+		while (true)	// Gets the users selection
 		{
 			std::getline(cin, select_str);
 			istringstream instream(select_str);
@@ -27,7 +27,7 @@ void Simulator::askOwner() // Asks whether to continue or not
 				if (select > 0)
 					if (select < 3)
 						break;
-			cout << "You need to enter 1 or 2: ";
+			cout << "Please enter 1 or 2: ";
 		}
 		cout << endl;
 		if (select == 2)
@@ -38,8 +38,8 @@ void Simulator::askOwner() // Asks whether to continue or not
 		else
 			_proceed = true;
 	}
-	cout << "Specify a lower temperature bound: ";
-	while (true) // Gets the user's lower bound selection
+	cout << "Enter a lower temperature bound (integer): ";
+	while (true)	// Gets the user's lower bound selection
 	{
 		std::getline(cin, select_str);
 		istringstream instream(select_str);
@@ -49,10 +49,10 @@ void Simulator::askOwner() // Asks whether to continue or not
 		cout << "You need to enter an integer: ";
 	}
 
-	cout << "Specify an upper temperature bound: ";
+	cout << "Enter an upper temperature bound: ";
 
 	int upper;
-	while (true) // Gets the user's upper bound selection
+	while (true)	// Gets the user's upper bound selection
 	{
 		std::getline(cin, select_str);
 		istringstream instream(select_str);
@@ -60,7 +60,7 @@ void Simulator::askOwner() // Asks whether to continue or not
 		if (instream)
 			if (upper > _lower)
 				break;
-		cout << "You need to enter an integer greater than your lower bound: ";
+		cout << "You need to enter an integer greater than your lower one: ";
 	}
 	_upper = upper;
 	_iter_count++;

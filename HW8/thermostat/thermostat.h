@@ -14,34 +14,33 @@
 #include "agent.h"
 
 #include <iostream>
-using std::cout;
-using std::cin;
-using std::endl;
 #include <vector>
-using std::vector;
 #include <cstdlib>
 #include <ctime>
 #include <Windows.h>
 #include <random>
-using std::random_device;
 #include <string>
-using std::string;
 #include <iomanip>
+#include <sstream>
+#include <fstream>
+#include <map>
+#include <utility>
+#include <ios>
+using std::cout;
+using std::cin;
+using std::endl;
+using std::vector;
+using std::random_device;
+using std::string;
 using std::setw;
 using std::right;
-#include <sstream>
 using std::istringstream;
-#include <fstream>
 using std::ofstream;
 using std::ifstream;
 using std::ios;
-#include <map>
 using std::map;
-#include <utility>
 using std::pair;
-#include <ios>
 using std::left;
-
 using std::size_t;
 
 #define thermostat_H
