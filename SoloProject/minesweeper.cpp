@@ -6,6 +6,10 @@
 //This program will allow the user to play a game of minesweeper.
 //
 
+//
+// sometimes the game will enter multiple coordinates. NOT PERFECT :/
+//
+
 #include <iostream>
 #include "game.h"
 #include <string>
@@ -29,16 +33,19 @@ int main()
 {
 	int minecount, sizeX, sizeY, x, y, status;
 	string turn;
-	getUserInput(sizeX, "Enter board width (3-16): ");
-	getUserInput(sizeY, "Enter board height (3-16): ");
-	getUserInput(minecount, "Enter the number of mines: ");
+	cout << "################################" << endl;
+	cout << "###  WELCOME TO MINESWEEPER  ###" << endl;
+	cout << "################################" << endl << endl;
+	getUserInput(sizeX, "Enter Minefield Width (3-16): ");
+	getUserInput(sizeY, "\nEnter Minefield Height (3-16): ");
+	getUserInput(minecount, "\nEnter the number of mines: ");
 	Game game(minecount, sizeX, sizeY);
 
 	time_t start = time(0);
 	// main game loop
 	while (true)
 	{
-		cout << "Enter coordinates (Ex. ab OR db): ";
+		cout << "Enter Coordinates xy (Ex. ac OR eb): ";
 		cin >> turn;
 		if (turn.length() > 2)
 		{
@@ -51,7 +58,8 @@ int main()
 		status = game.update(x, y);
 		if (status == -1)
 		{
-			cout << endl << "You lost. Press any key to exit" << endl;
+			cout << endl << "**EXPLOSION**. Oh no! you hit a mine!" << endl <<
+				"Press any key to exit";		//Lost the game. Hit mine.
 			break;
 		}
 		if (status == 1)

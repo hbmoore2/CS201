@@ -1,3 +1,10 @@
+//
+//minefield.cpp
+//Harrison Moore
+//CS 201
+//April 27, 2020
+//
+
 #include "minefield.h"
 #include <iostream>
 #include <time.h>
@@ -6,7 +13,6 @@
 
 using namespace std;
 
-//ctor
 Board::Board(int mines, int sizex, int sizey) : sizeX(sizex), sizeY(sizey)
 {
 	srand(time(NULL));
@@ -81,7 +87,7 @@ Board::~Board()
 }
 
 
-//print board
+//print minefield
 void Board::print()
 {
 	// newline and 3 spaces
@@ -127,7 +133,7 @@ void Board::moveToUIF(int x, int y)
 }
 
 
-// recursive function if minecount == 0
+// if minecount == 0
 void Board::checkEmptyField(int x, int y)
 {
 	if (x >= 0 && y >= 0 && x < sizeX && y < sizeY)

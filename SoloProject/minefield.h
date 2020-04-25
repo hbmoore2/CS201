@@ -1,3 +1,10 @@
+//
+//minefield.h
+//Harrison Moore
+//CS 201
+//April 27, 2020
+//
+
 #ifndef BOARD_H
 #define BOARD_H
 

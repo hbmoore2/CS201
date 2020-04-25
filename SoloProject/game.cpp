@@ -1,21 +1,25 @@
+//
+//game.cpp
+//Harrison Moore
+//CS 201
+//April 27, 2020
+//
+
 #include "game.h"
 #include <iostream>
 
 using namespace std;
 
-//ctor
 Game::Game(int minecount, int sizeX, int sizey) : board(Board(minecount, sizeX, sizey))
 {
-	// print board for first time
+	// prints minefield
 	board.print();
 }
 
 Game::~Game()
 {
-	// empty dtor
 }
 
-//update, called after uinput
 int Game::update(int x, int y)
 {
 	if (board.getData(x, y) == 'm')
@@ -25,7 +29,7 @@ int Game::update(int x, int y)
 	}
 	else if (board.getData(x, y) == '0')
 	{
-		// if empty field was hit, enter recursive function
+		// if empty field was hit
 		board.checkEmptyField(x, y);
 		// out of bounds
 	}
@@ -33,7 +37,7 @@ int Game::update(int x, int y)
 
 	}
 	else {
-		// none of the above, so a number was hit
+		// a number was hit
 		board.moveToUIF(x, y);
 	}
 	if (board.getGameStatus() == 1) {
@@ -41,10 +45,10 @@ int Game::update(int x, int y)
 		return 1;
 	}
 
-	// clear screen?
-	cout << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+	// clear screen after coordinates entered.
+	cout << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
 
-	//finally, print board
+	//prints minefield
 	board.print();
 	return 0;
 }

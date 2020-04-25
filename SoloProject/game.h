@@ -1,3 +1,10 @@
+//
+//game.h
+//Harrison Moore
+//CS 201
+//April 27, 2020
+//
+
 #ifndef GAME_H
 #define GAME_H
 
@@ -10,7 +17,7 @@ public:
 	~Game();
 	int update(int x, int y);
 private:
-	//game board
+	//minefield
 	Board board;
 };
 
